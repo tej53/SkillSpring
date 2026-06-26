@@ -1,4 +1,4 @@
-package EmployeeManagementSystem;
+package DSA.EmployeeManagementSystem;
 
 class EmployeeManagement {
     Employee employees[] = new Employee[100];

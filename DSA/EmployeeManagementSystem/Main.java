@@ -1,4 +1,4 @@
-package EmployeeManagementSystem;
+package DSA.EmployeeManagementSystem;
 
 class Main {
     public static void main(String[] args) {

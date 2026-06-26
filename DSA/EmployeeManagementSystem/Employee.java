@@ -1,4 +1,4 @@
-package EmployeeManagementSystem;
+package DSA.EmployeeManagementSystem;
 
 class Employee {
     int employeeID;
