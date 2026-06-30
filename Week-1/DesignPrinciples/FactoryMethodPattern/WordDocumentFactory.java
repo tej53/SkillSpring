@@ -1,3 +1,4 @@
+
 package DesignPrinciples.FactoryMethodPattern;
 
 public class WordDocumentFactory extends DocumentFactory{
