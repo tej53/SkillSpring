@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Inventory{
+class Inventory {
     HashMap<Integer, Product> products = new HashMap<>();
 
     public void addProduct(Product p){
