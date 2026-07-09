@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Repository Bean -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository"/>
+
+    <!-- Define Service Bean using both Constructor Injection and Setter Injection -->
+    <bean id="bookService" class="com.library.service.BookService">
+        <!-- Constructor Injection -->
+        <constructor-arg ref="bookRepository"/>
+        <!-- Setter Injection -->
+        <property name="libraryName" value="City Central Library"/>
+    </bean>
+
+</beans>
