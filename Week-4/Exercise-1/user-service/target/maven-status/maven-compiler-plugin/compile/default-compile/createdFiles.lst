@@ -1,0 +1,5 @@
+com\skillspring\userservice\repository\UserRepository.class
+com\skillspring\userservice\entity\User.class
+com\skillspring\userservice\UserServiceApplication.class
+com\skillspring\userservice\controller\UserController.class
+com\skillspring\userservice\service\UserService.class
