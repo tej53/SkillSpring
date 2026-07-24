@@ -1,0 +1,2 @@
+com\skillspring\apigateway\ApiGatewayApplication.class
+com\skillspring\apigateway\filter\LoggingFilter.class
