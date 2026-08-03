@@ -1,0 +1,72 @@
+Git HOL 2 - Step by Step
+
+Step 1: Create a .log File and log Folder
+
+Open Git Bash and go to your Git project:
+
+    cd Desktop/GitDemo
+
+Create a .log file:
+
+    touch sample.log
+
+Create a log folder:
+
+    mkdir loga
+
+Check that they were created:
+
+    ls
+
+------------------------------------------------------------------------
+
+Step 2: Update the .gitignore File
+
+Create or open the .gitignore file:
+
+    notepad++ .gitignore
+
+Add the following lines:
+
+    *.log
+    log/
+
+Save and close the file.
+
+Stage the .gitignore file:
+
+    git add .gitignore
+
+(Optional) Commit the changes:
+
+    git commit -m "Added .gitignore for log files and log folder"
+
+------------------------------------------------------------------------
+
+Step 3: Verify Git Ignores the Files
+
+Run:
+
+    git status
+
+You should see that sample.log and the log folder do not appear under
+untracked files because they are ignored.
+
+------------------------------------------------------------------------
+
+
+    cd Desktop/GitDemo
+
+    touch sample.log
+
+    mkdir log
+
+    ls
+
+    notepad++ .gitignore
+
+    git add .gitignore
+
+    git commit -m "Added .gitignore for log files and log folder"
+
+    git status

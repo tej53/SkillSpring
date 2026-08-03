@@ -1,0 +1,189 @@
+Git HOL - Step by Step
+
+Step 1: Create a GitLab Project
+
+1.  Open GitLab.
+2.  Log in.
+3.  Click New Project.
+4.  Select Create blank project.
+5.  Project Name: GitDemo
+6.  Choose the visibility (Private/Public).
+7.  Click Create Project.
+
+------------------------------------------------------------------------
+
+Step 2: Check Git Installation
+
+Open Git Bash and run:
+
+    git --version
+
+Example Output:
+
+    git version 2.51.0.windows.1
+
+------------------------------------------------------------------------
+
+Step 3: Configure Git Username and Email
+
+Check current configuration:
+
+    git config --global user.name
+    git config --global user.email
+
+Set your username and email:
+
+    git config --global user.name "Your Name"
+    git config --global user.email "youremail@example.com"
+
+Verify:
+
+    git config --global --list
+
+------------------------------------------------------------------------
+
+Step 4: Add Notepad++ to Environment Variables
+
+Typical installation path:
+
+C:\Program Files\Notepad++
+
+or
+
+C:\Program Files (x86)\Notepad++
+
+1.  Search Environment Variables in Windows.
+2.  Open Edit the system environment variables.
+3.  Click Environment Variables.
+4.  Under System Variables, select Path.
+5.  Click Edit → New.
+6.  Add the Notepad++ installation path.
+7.  Click OK to save.
+
+------------------------------------------------------------------------
+
+Step 5: Alias Notepad++ and Set it as Git Editor
+
+Restart Git Bash.
+
+Create alias:
+
+    alias notepad++="'C:/Program Files/Notepad++/notepad++.exe'"
+
+Set Git editor:
+
+    git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+
+Verify:
+
+    git config --global core.editor
+
+------------------------------------------------------------------------
+
+Step 6: Initialize Repository
+
+    cd Desktop
+    git init GitDemo
+    cd GitDemo
+
+------------------------------------------------------------------------
+
+Step 7: Create welcome.txt
+
+Using Git Bash:
+
+    echo Welcome to Git > welcome.txt
+
+Or:
+
+    notepad++ welcome.txt
+
+Example content:
+
+    Welcome to Git.
+
+    This is my first Git repository.
+
+    Learning Git is fun.
+
+------------------------------------------------------------------------
+
+Step 8: Add File
+
+    git add welcome.txt
+    git status
+
+------------------------------------------------------------------------
+
+Step 9: Commit Using Notepad++
+
+    git commit
+
+Example commit message:
+
+    Created welcome file
+
+    Added initial project information.
+    This is the first commit.
+
+Check log:
+
+    git log
+
+Press:
+
+    q
+
+to exit.
+
+------------------------------------------------------------------------
+
+Step 10: Pull and Push
+
+Add remote:
+
+    git remote add origin https://gitlab.com/username/GitDemo.git
+
+Verify:
+
+    git remote -v
+
+Pull:
+
+    git pull origin master --allow-unrelated-histories
+
+Push:
+
+    git push -u origin master
+
+  If your repository uses main instead of master, replace master with
+  main.
+
+------------------------------------------------------------------------
+
+    git --version
+
+    git config --global user.name "Your Name"
+    git config --global user.email "youremail@example.com"
+
+    alias notepad++="'C:/Program Files/Notepad++/notepad++.exe'"
+
+    git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+
+    cd Desktop
+    git init GitDemo
+    cd GitDemo
+
+    echo Welcome to Git > welcome.txt
+
+    git add welcome.txt
+    git status
+
+    git commit
+
+    git remote add origin https://gitlab.com/username/GitDemo.git
+    git remote -v
+
+    git pull origin master --allow-unrelated-histories
+
+    git push -u origin master

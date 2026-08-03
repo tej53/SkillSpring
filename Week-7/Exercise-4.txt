@@ -1,0 +1,177 @@
+Git HOL 4 - Step by Step
+
+Step 1: Verify Master Branch is Clean
+
+Open Git Bash and go to your project:
+
+    cd Desktop/GitDemo
+    git checkout master
+    git status
+
+Make sure the output says:
+
+    nothing to commit, working tree clean
+
+------------------------------------------------------------------------
+
+Step 2: Create and Switch to GitWork Branch
+
+    git checkout -b GitWork
+
+Verify:
+
+    git branch
+
+------------------------------------------------------------------------
+
+Step 3: Add hello.xml and Commit
+
+Create the file:
+
+    notepad++ hello.xml
+
+Example content:
+
+    <message>Hello from GitWork Branch</message>
+
+Save the file.
+
+Stage and commit:
+
+    git add hello.xml
+    git commit -m "Added hello.xml in GitWork branch"
+
+------------------------------------------------------------------------
+
+Step 4: Switch Back to Master and Create a Different hello.xml
+
+    git checkout master
+
+Open the file:
+
+    notepad++ hello.xml
+
+Example content:
+
+    <message>Hello from Master Branch</message>
+
+Save the file.
+
+Stage and commit:
+
+    git add hello.xml
+    git commit -m "Added hello.xml in master branch"
+
+------------------------------------------------------------------------
+
+Step 5: View Commit History
+
+    git log --oneline --graph --decorate --all
+
+Press q to exit if needed.
+
+------------------------------------------------------------------------
+
+Step 6: Compare the Branches
+
+Using Git diff:
+
+    git diff master GitWork
+
+Using P4Merge (if configured):
+
+    git difftool master GitWork
+
+------------------------------------------------------------------------
+
+Step 7: Merge GitWork into Master
+
+    git merge GitWork
+
+Since both branches modified hello.xml, Git should report a merge
+conflict.
+
+------------------------------------------------------------------------
+
+Step 8: Resolve the Conflict
+
+Open the 3-way merge tool:
+
+    git mergetool
+
+Resolve the conflict, save the merged file, then stage and commit:
+
+    git add hello.xml
+    git commit -m "Resolved merge conflict in hello.xml"
+
+------------------------------------------------------------------------
+
+Step 9: Ignore the Backup File
+
+Open .gitignore:
+
+    notepad++ .gitignore
+
+Add the backup file pattern (example):
+
+    *.orig
+
+Save the file.
+
+Commit the update:
+
+    git add .gitignore
+    git commit -m "Updated .gitignore to ignore backup files"
+
+------------------------------------------------------------------------
+
+Step 10: Delete the Branch and View Logs
+
+Delete the merged branch:
+
+    git branch -d GitWork
+
+View the logs again:
+
+    git log --oneline --graph --decorate --all
+
+------------------------------------------------------------------------
+
+Complete Command List
+
+    cd Desktop/GitDemo
+
+    git checkout master
+    git status
+
+    git checkout -b GitWork
+
+    notepad++ hello.xml
+    git add hello.xml
+    git commit -m "Added hello.xml in GitWork branch"
+
+    git checkout master
+
+    notepad++ hello.xml
+    git add hello.xml
+    git commit -m "Added hello.xml in master branch"
+
+    git log --oneline --graph --decorate --all
+
+    git diff master GitWork
+    git difftool master GitWork
+
+    git merge GitWork
+
+    git mergetool
+
+    git add hello.xml
+    git commit -m "Resolved merge conflict in hello.xml"
+
+    notepad++ .gitignore
+    git add .gitignore
+    git commit -m "Updated .gitignore to ignore backup files"
+
+    git branch -d GitWork
+
+    git log --oneline --graph --decorate --all

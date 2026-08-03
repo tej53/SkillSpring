@@ -1,0 +1,122 @@
+Git HOL 3 - Step by Step
+
+Step 1: Create a New Branch
+
+Open Git Bash and go to your project:
+
+    cd Desktop/GitDemo
+
+Create a new branch:
+
+    git branch GitNewBranch
+
+------------------------------------------------------------------------
+
+Step 2: List Branches and Switch
+
+List all branches:
+
+    git branch
+
+Switch to the new branch:
+
+    git checkout GitNewBranch
+
+Verify:
+
+    git branch
+
+The current branch will have a * beside it.
+
+------------------------------------------------------------------------
+
+Step 3: Add Files and Commit
+
+Create a new file:
+
+    echo This is GitNewBranch > branch.txt
+
+Stage the file:
+
+    git add branch.txt
+
+Commit the changes:
+
+    git commit -m "Added branch.txt in GitNewBranch"
+
+------------------------------------------------------------------------
+
+Step 4: Switch Back to Master
+
+    git checkout master
+
+(If your default branch is main, use git checkout main.)
+
+------------------------------------------------------------------------
+
+Step 5: Compare Branches
+
+View differences using the command line:
+
+    git diff master GitNewBranch
+
+If P4Merge is configured, launch it:
+
+    git difftool master GitNewBranch
+
+------------------------------------------------------------------------
+
+Step 6: Merge the Branch
+
+    git merge GitNewBranch
+
+------------------------------------------------------------------------
+
+Step 7: View Commit History
+
+    git log --oneline --graph --decorate
+
+Press q to exit if needed.
+
+------------------------------------------------------------------------
+
+Step 8: Delete the Branch and Check Status
+
+Delete the merged branch:
+
+    git branch -d GitNewBranch
+
+Check repository status:
+
+    git status
+
+------------------------------------------------------------------------
+
+
+    cd Desktop/GitDemo
+
+    git branch GitNewBranch
+
+    git branch
+
+    git checkout GitNewBranch
+
+    echo This is GitNewBranch > branch.txt
+
+    git add branch.txt
+
+    git commit -m "Added branch.txt in GitNewBranch"
+
+    git checkout master
+
+    git diff master GitNewBranch
+
+    git difftool master GitNewBranch
+
+    git merge GitNewBranch
+
+    git log --oneline --graph --decorate
+
+    git branch -d GitNewBranch
+
+    git status
